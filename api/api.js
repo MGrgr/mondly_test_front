@@ -1,7 +1,7 @@
 import * as axios from "axios";
 
 const instance = axios.create({
-    baseURL: "http://localhost:3001/",
+    baseURL: process.env.HOST ? `${process.env.HOST}:${process.env.PORT}/` : "http://localhost:3001/",
     headers: { "Content-Type": "application/json" },
 });
 
