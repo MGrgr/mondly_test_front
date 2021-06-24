@@ -88,11 +88,13 @@ const Label = styled.label`
 
 const Input = styled.input`
 	box-shadow: 0 0 1px gray;
-    padding: 3px;
+    padding: 5px;
+    font-size: 15px;
 `;
 
 const Elements = styled.div`
     padding: 5px;
+    text-align: center;
 `;
 
 const ButtonSubmit = styled.button`
@@ -101,9 +103,10 @@ const ButtonSubmit = styled.button`
     color: white;
     outline: none;
     font-size: 1rem;
-    padding: 20px;
+    padding: 10px;
     border-radius: 999px;
     cursor: pointer;
+
 `
 
 export default AdminForm;

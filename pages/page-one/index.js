@@ -1,6 +1,5 @@
 
 const PageOne = () => {
-    PageOne.layout = "default";
     return (
         <div>
             <h1>Page One</h1>
