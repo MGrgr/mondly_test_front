@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from 'next/router'
-import { useEffect } from "react";
 
 const DefaultLayout = (props) => {
 
@@ -12,15 +11,8 @@ const DefaultLayout = (props) => {
     })
   }
 
-  useEffect(() => {
-    console.log('language changed')
-  }, [router.locale])
   return (
   <>
-    <Head>
-      <title>Default</title>
-      <meta charSet="utf-8" />
-    </Head>
     <div>
       <div className="topnav" id="myTopnav">
         <Link href="/" tag="a">

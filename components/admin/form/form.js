@@ -2,17 +2,19 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { API } from "../../../api/api";
+import { useRouter } from 'next/router'
 
 const AdminForm = () => {
+
+    const router = useRouter();
 
     const [formState, setFormState] = useState({});
 
     const handleSubmit = (event) => {
-
         event.preventDefault();
-        API.updateContent(formState).then(function (response) {
-            setFormState(response);
-        })
+        API.updateContent(formState, router.locale).then(function (response) {
+                setFormState(response);
+            })
             .catch(function (response) {
                 console.log(response);
             });
@@ -25,10 +27,10 @@ const AdminForm = () => {
     }
 
     useEffect(() => {
-        API.getContent().then(response => {
+        API.getContent(router.locale).then(response => {
             setFormState(response);
         })
-    }, [])
+    }, [router.locale])
 
     return (
         <Form>

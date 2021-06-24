@@ -6,14 +6,14 @@ const instance = axios.create({
 });
 
 export const API = {
-    getContent() {
-        return instance.get(`/admin/content`)
+    getContent(lang) {
+        return instance.get(`/admin/content?lang=${lang}`)
             .then(response => {
                 return response.data[0];
             })
     },
-    updateContent(formState) {
-        return instance.put(`/admin`, formState)
+    updateContent(formState, lang) {
+        return instance.put(`/admin`, {formState, lang: lang})
             .then(response => {
                 return response.data;
             })

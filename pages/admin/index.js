@@ -1,9 +1,12 @@
 import AdminForm from "../../components/admin/form/form"
-
+import Head from "next/head"
 const AdminPanel = () => {
-    AdminPanel.layout = "default";
     return (
         <>
+            <Head>
+                <title>Admin Panel</title>
+                <meta charSet="utf-8" />
+            </Head>
             <div>
                 <h1>Admin Panel</h1>
             </div>
