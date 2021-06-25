@@ -2,7 +2,6 @@ import Head from "next/head"
 import styled from 'styled-components';
 import { useRouter } from 'next/router'
 
-
 const Home = ({ data }) => {
 
     const router = useRouter();
